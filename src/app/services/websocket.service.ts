@@ -24,4 +24,10 @@ export class WebsocketService {
       this.socketStatus = false;
     });
   }
+  emit( evento: string, payload?: any, callback?: Function) {
+console.log('Emit event');
+
+    this.socket.emit(evento , payload, callback);
+
+  }
 }
